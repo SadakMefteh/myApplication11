@@ -21,7 +21,7 @@
     <path
         android:pathData="M0,0h33v33h-33z"
         android:strokeAlpha="0.5"
-        android:fillColor="url(#pattern0_0_1)"
+
         android:fillAlpha="0.5"/>
   </group>
 </vector>
