@@ -144,7 +144,7 @@
 
         <!-- Bouton Sign Up -->
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/login"
+            android:id="@+id/signup"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_gravity="center"
@@ -156,7 +156,7 @@
 
         <!-- Lien Login -->
         <TextView
-            android:id="@+id/size"
+            android:id="@+id/lienLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -164,6 +164,6 @@
             android:gravity="center"
             android:text="Already have an account? Login"
             android:textColor="#6200EE"
-            android:textSize="10sp" />
+            android:textSize="14sp" />
     </LinearLayout>
 </ScrollView>

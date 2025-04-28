@@ -106,7 +106,7 @@
 
         <!-- Lien Login -->
         <TextView
-            android:id="@+id/size"
+            android:id="@+id/lienSignup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -114,6 +114,6 @@
             android:gravity="center"
             android:text="Already have an account? Login"
             android:textColor="#6200EE"
-            android:textSize="10sp" />
+            android:textSize="14sp" />
     </LinearLayout>
 </ScrollView>
