@@ -3,13 +3,11 @@ package com.example.myapplication1
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
-
-class MainActivity : AppCompatActivity() {
-
-    @androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.DONUT)
+class AdminHome : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_client_home)
+        setContentView(R.layout.activity_admin_home)
+
 
 
     }

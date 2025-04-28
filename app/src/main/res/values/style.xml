@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SignUpButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingVertical">8dp</item>
+        <item name="backgroundTint">@color/purple_500</item>
+        <item name="shapeAppearanceOverlay">@style/SignUpButtonShape</item>
+    </style>
+
+    <style name="SignUpButtonShape" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">80dp</item>
+    </style>
+
+</resources>

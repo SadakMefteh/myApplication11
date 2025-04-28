@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:padding="16dp">
+    android:padding="24dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,62 +25,12 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:gravity="center"
-            android:text="Sign Up"
+            android:text="Log In"
             android:textColor="#0A0D31"
             android:textSize="34sp"
             android:textStyle="bold" />
 
-        <!-- Champ Full Name -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:text="Full Name"
-            android:textColor="#616161"
-            android:textSize="10sp" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="10sp"
-                android:hint="Tanya Myroniuk"
-                android:inputType="textPersonName"
-                android:drawableStart="@drawable/email_mail_letter"
-                android:drawablePadding="8dp"
-                android:drawableTint="#616161"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- Champ Phone Number -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Phone Number"
-            android:textSize="10sp"
-            android:layout_marginBottom="4dp"
-            android:textColor="#616161"/>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="+880172663389"
-                android:inputType="phone"
-                android:textSize="10sp"
-                android:drawableStart="@drawable/phone"
-                android:drawablePadding="8dp"
-                android:drawableTint="#616161"/>
-        </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Champ Email Address -->
         <TextView
@@ -135,7 +85,7 @@
                 android:drawableTint="#616161"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Ligne de séparation -->
+        <!-- Ligne de sÃ©paration -->
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -144,15 +94,15 @@
 
         <!-- Bouton Sign Up -->
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/signup"
+            android:id="@+id/login"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:backgroundTint="#071AD7"
-            android:text="Sign Up"
+            android:text="Login"
             android:textColor="#FFFFFF"
-            app:cornerRadius="20dp"/>
+            app:cornerRadius="20dp" />
 
         <!-- Lien Login -->
         <TextView
