@@ -94,6 +94,16 @@
             android:background="#EEEEEE"
             android:layout_marginVertical="8dp"/>
 
+        <TextView
+            android:id="@+id/lienForgetpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Forget Password"
+            android:textColor="#6200EE"
+            android:textSize="16sp" />
         <!-- Bouton Sign Up -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/login"
@@ -104,6 +114,7 @@
             android:backgroundTint="#071AD7"
             android:text="Login"
             android:textColor="#FFFFFF"
+            android:textSize="14sp"
             app:cornerRadius="20dp" />
 
         <!-- Lien Login -->
@@ -116,6 +127,6 @@
             android:gravity="center"
             android:text="you don't have an account? Register"
             android:textColor="#6200EE"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
     </LinearLayout>
 </ScrollView>

@@ -19,6 +19,7 @@ class Login : AppCompatActivity() {
     private lateinit var passwordEditText: TextInputEditText
     private lateinit var loginButton: MaterialButton
     private lateinit var signupLink: TextView
+    private lateinit var forgotPasswordLink: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +33,7 @@ class Login : AppCompatActivity() {
         passwordEditText = findViewById(R.id.passwordEditText)
         loginButton = findViewById(R.id.login)
         signupLink = findViewById(R.id.lienSignup)
+        forgotPasswordLink = findViewById(R.id.lienForgetpass)
 
         // Gestion du clic sur le bouton de connexion
         loginButton.setOnClickListener {
@@ -41,6 +43,11 @@ class Login : AppCompatActivity() {
         // Gestion du lien vers l'inscription
         signupLink.setOnClickListener {
             navigateToRegister()
+        }
+
+        // Gestion du lien "Forgot Password"
+        forgotPasswordLink.setOnClickListener {
+            resetPassword()
         }
     }
 
@@ -67,6 +74,37 @@ class Login : AppCompatActivity() {
                         else -> "Erreur de connexion: ${task.exception?.message}"
                     }
                     Toast.makeText(this, errorMessage, Toast.LENGTH_LONG).show()
+                }
+            }
+    }
+
+    private fun resetPassword() {
+        val email = emailEditText.text.toString().trim()
+
+        if (email.isEmpty()) {
+            Toast.makeText(this, "Veuillez entrer votre email", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            Toast.makeText(this, "Veuillez entrer un email valide", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        auth.sendPasswordResetEmail(email)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(
+                        this,
+                        "Email de réinitialisation envoyé à $email",
+                        Toast.LENGTH_LONG
+                    ).show()
+                } else {
+                    Toast.makeText(
+                        this,
+                        "Échec de l'envoi de l'email de réinitialisation: ${task.exception?.message}",
+                        Toast.LENGTH_LONG
+                    ).show()
                 }
             }
     }
