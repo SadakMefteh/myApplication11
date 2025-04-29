@@ -3,6 +3,7 @@ package com.example.myapplication1
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
@@ -17,7 +18,7 @@ class Login : AppCompatActivity() {
     private lateinit var emailEditText: TextInputEditText
     private lateinit var passwordEditText: TextInputEditText
     private lateinit var loginButton: MaterialButton
-    //private lateinit var signupLink: TextView
+    private lateinit var signupLink: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +31,7 @@ class Login : AppCompatActivity() {
         emailEditText = findViewById(R.id.emailEditText)
         passwordEditText = findViewById(R.id.passwordEditText)
         loginButton = findViewById(R.id.login)
-       // signupLink = findViewById(R.id.lienSignup)
+        signupLink = findViewById(R.id.lienSignup)
 
         // Gestion du clic sur le bouton de connexion
         loginButton.setOnClickListener {
@@ -38,9 +39,9 @@ class Login : AppCompatActivity() {
         }
 
         // Gestion du lien vers l'inscription
-       /* signupLink.setOnClickListener {
+        signupLink.setOnClickListener {
             navigateToRegister()
-        }*/
+        }
     }
 
     private fun loginUser() {
