@@ -48,14 +48,15 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="10sp"
-                android:hint="tanya.myroniuk@gmail.com"
-                android:inputType="textEmailAddress"
                 android:drawableStart="@drawable/email_mail_letter"
                 android:drawablePadding="8dp"
-                android:drawableTint="#616161"/>
+                android:drawableTint="#616161"
+                android:hint="Enter your mail"
+                android:inputType="textEmailAddress"
+                android:textSize="10sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Champ Password -->
@@ -75,14 +76,15 @@
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="10sp"
-                android:hint="*********"
-                android:inputType="textPassword"
                 android:drawableStart="@drawable/lock"
                 android:drawablePadding="8dp"
-                android:drawableTint="#616161"/>
+                android:drawableTint="#616161"
+                android:hint="*********"
+                android:inputType="textPassword"
+                android:textSize="10sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Ligne de sÃ©paration -->

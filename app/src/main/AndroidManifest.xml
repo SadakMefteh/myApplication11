@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permission Internet obligatoire pour Firebase -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Optionnel pour Firebase Auth avec Google/Phone -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -11,34 +16,57 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication1"
-        tools:targetApi="31" >
+        tools:targetApi="31">
+
+        <!-- Activité d'inscription -->
+        <activity
+            android:name=".Register"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Activité de connexion -->
+        <activity
+            android:name=".Login"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <!-- Activité principale -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.MyApplication1" >
+            android:theme="@style/Theme.MyApplication1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Activités après connexion -->
         <activity
             android:name=".ClientHome"
-            android:exported="false" />
-        <activity
-            android:name=".Register"
-            android:exported="false" />
-        <activity
-            android:name=".Login"
-            android:exported="false" >
+            android:exported="false"
+            android:launchMode="singleTop"/>
 
-        </activity>
         <activity
             android:name=".AdminHome"
-            android:exported="false" />
+            android:exported="false"
+            android:launchMode="singleTop"/>
 
+        <!-- Service Firebase (ajouté automatiquement par le plugin) -->
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false"
+            tools:ignore="ExportedService">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
 
     </application>
-
 </manifest>

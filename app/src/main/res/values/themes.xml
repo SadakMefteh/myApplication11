@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Pour Material Design "classique" (AppCompat) -->
-    <style name="Theme.MyApplication1" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Personnalisez les couleurs si besoin -->
+    <style name="Theme.MyApplication1" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Couleurs principales -->
         <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryDark">@color/purple_700</item>
-        <item name="colorAccent">@color/teal_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Activer Material 3 -->
+        <item name="materialButtonStyle">@style/Widget.Material3.Button</item>
     </style>
 </resources>
